@@ -18,18 +18,20 @@ from pathlib import Path
 from PIL import Image
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_NER_DIR = BASE_DIR / "ner_model_sangat_baru"
+MODEL_CLASSIFICATION_DIR = BASE_DIR / "klasifikasi-tfidf"
 
 # Model Tesseract
 pytesseract.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
 
-
-
 # Path ke model NER
-NER_MODEL_FOLDER = "/home/ariffadhilah124/archive-management-backend-api-model/api-model/ner_model_sangat_baru"
+NER_MODEL_FOLDER = MODEL_NER_DIR
 
 # Path ke model Klasifikasi
-KLASIFIKASI_MODEL_FOLDER = "/home/ariffadhilah124/archive-management-backend-api-model/api-model/klasifikasi-tfidf"
+KLASIFIKASI_MODEL_FOLDER = MODEL_CLASSIFICATION_DIR
 
 # Memuat model NER spaCy
 ner_model = spacy.load(NER_MODEL_FOLDER)
