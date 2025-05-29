@@ -21,15 +21,15 @@ from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
 
 # Model Tesseract
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
 
 
 
 # Path ke model NER
-NER_MODEL_FOLDER = "d:/Project/SKRIPSI/api-model/ner_model_sangat_baru"
+NER_MODEL_FOLDER = "/home/ariffadhilah124/archive-management-backend-api-model/api-model/ner_model_sangat_baru"
 
 # Path ke model Klasifikasi
-KLASIFIKASI_MODEL_FOLDER = "d:/Project/SKRIPSI/api-model/klasifikasi-tfidf"
+KLASIFIKASI_MODEL_FOLDER = "/home/ariffadhilah124/archive-management-backend-api-model/api-model/klasifikasi-tfidf"
 
 # Memuat model NER spaCy
 ner_model = spacy.load(NER_MODEL_FOLDER)
