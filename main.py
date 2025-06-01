@@ -25,7 +25,7 @@ MODEL_NER_DIR = BASE_DIR / "ner_model_sangat_baru"
 MODEL_CLASSIFICATION_DIR = BASE_DIR / "klasifikasi-tfidf"
 
 # Model Tesseract
-pytesseract.pytesseract.tesseract_cmd = r"/usr/share/tesseract-ocr/4.00/"
+pytesseract.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
 
 # Path ke model NER
 NER_MODEL_FOLDER = MODEL_NER_DIR
