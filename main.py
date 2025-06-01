@@ -189,6 +189,7 @@ class FileRequest(BaseModel):
 
 @app.post("/file")
 async def upload_file(request: FileRequest):
+    print("Received file URL:", request.file_url)
     file_url = request.file_url
     print("URL file:", file_url)
     try:
@@ -228,6 +229,7 @@ async def upload_file(request: FileRequest):
         }
 
     except Exception as e:
+        print(f"Error processing file: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Error processing file: {str(e)}")
 
 if __name__ == "__main__":
